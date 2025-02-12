@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(135deg, #000000, rgb(60, 15, 134), rgb(0, 20, 49), rgb(36, 1, 1), rgb(18, 2, 34), rgb(73, 10, 2), rgb(2, 1, 0) );
+    padding: 30px;
+    height: 68%;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.balance-label {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.balance {
+    text-align: left;
+    width: 2000px;
+    display: block; /* Чтобы `text-align` работал */
+    text-align: left; 
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-top: 75px;
+    transform: translateX(-70px); /* Сдвиг влево */ 
+}
+
+/* Стили для рамок LEVEL и CLICK */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+        gradient-button {
+        background: linear-gradient(135deg, #d32f2f, orange, yellow);
+        border: none;
+        border-radius: 20px;
+        color: white;
+        padding: 20px 40px;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background 0.3s;
+        display: inline-block;
+    }
+
+}
+
+.level-box, .click-box {
+    font-size: 24px;
+    font-weight: bold;
+   
+    padding: 7px 12px; /* Внутренние отступы */
+    border-radius: 70px; /* Закругление углов */
+    background: linear-gradient(135deg, #740000, rgb(196, 2, 2), rgb(110, 27, 1), rgb(97, 1, 1), rgb(0, 0, 0));
+}
+
+.click-area {
+    height: 180px; /* Увеличение высоты */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative; /* Или absolute */
+    transform: translateX(-20px); /* Сдвиг влево */
+    width: 33%;
+    padding: 120px;
+    background: linear-gradient( #000000, #7e1305, rgb(129, 0, 0), rgb(0, 0, 0));
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(55, 53, 179, 0.493);
+    cursor: pointer;
+    user-select: none;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.click-area:active {
+    background-color: #ffffff;
+}
+/* Добавляем в конец CSS */
+.nav-buttons {
+    position: fixed;
+    bottom: 133px;
+    left: 50%;
+    transform: translateX(-80%);
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+
+.add-btn {
+    background: #2225b4;
+    color: white;
+}
+
+.back-btn {
+    background: #8a0909;
+    color: white;
+}
+
+.white-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 68%;
+    background: linear-gradient(135deg, #000000, rgb(60, 15, 134), rgb(0, 1, 51), rgb(14, 0, 39) );
+    border-radius: 10px;
+    padding: 30px;
+    display: none;
+    z-index: 999;
+} 
+
+.nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #000000, rgb(197, 15, 15), rgb(102, 1, 1), rgb(32, 0, 0));
+    box-shadow: 2px 2px 5px #222121,
+               -2px -2px 5px #272626;
+    cursor: pointer;
+    font-weight: 800;
+    color: #dfc3c3;
+    font-family: Arial, sans-serif;
+    transition: all 0.2s;
+}
+
+
+.editable-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* Контейнер для кнопок (обязательный параметр) */
+.nav-tabs {
+    position: relative;
+    min-height: 300px;
+}
+
+/* Стили для кнопки купить пп */
+.tab-btn:nth-child(1) {
+    position: absolute;
+    top: 87%;  /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Центрирование */
+    width: 250px; height: 53px;
+}
+
+/* Стили для кнопки мои пп */
+.tab-btn:nth-child(2) {
+    position: absolute;
+    top: 125%;  /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Центрирование */
+    width: 250px; height: 53px;
+}
+.enterprise {
+    position: absolute;
+    top: 23;
+    left: 10;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease; /* Плавное перемещение */
+  }
+  
+  .controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  .controls button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  /* Добавьте в конец styles.css */
+.subpage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 999;
+  }
+  
+  /* Обновленные стили кнопок */
+  .tab-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 53px;
+    cursor: pointer;
+  }
+  
+  .tab-btn:nth-child(1) { top: 75%; }
+  .tab-btn:nth-child(2) { top: 85%; }
+
+  /* Подстраницы (Купить/Мои) */
+.subpage {
+    display: none;
+    text-align: center;
+    background: linear-gradient(135deg, #200000, rgb(71, 12, 4), rgb(151, 24, 7), rgb(122, 1, 1), rgb(36, 1, 1) );
+    padding: 30px;
+    height: 68%;
+    border-radius: 10px;
+    width: 300px;
+    z-index: 200;
+    transform: translate(216%, 18%);
+}
+
+/* Кнопки "Купить/Мои" */
+.tab-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 53px;
+    cursor: pointer;
+}
+
+#buyBtn { top: 120%; }
+#myBtn { top: 75%; }
+
+.enterprise {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+  /* Стили для главной страницы */
+.container.main-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-bg {
+    position: absolute;
+    top: 20;
+    left: 13px;
+    width: 93%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 20px 20px 20px 20px;
+}
+
+/* Элементы поверх изображения */
+.balance-container, 
+.stats, 
+.click-area {
+    position: relative;
+    z-index: 2;
+}
+
+/* Дополнительные стили для лучшей видимости */
+.balance-container {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.stats {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.click-area {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
